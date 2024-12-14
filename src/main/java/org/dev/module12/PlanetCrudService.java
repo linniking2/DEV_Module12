@@ -6,7 +6,10 @@ import org.hibernate.Transaction;
 import java.util.List;
 
 public class PlanetCrudService {
-    public void create(Planet planet) {
+    public PlanetCrudService() {
+    }
+
+    public Planet create(Planet planet) {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             Transaction transaction = session.beginTransaction();
             session.save(planet);
@@ -14,6 +17,7 @@ public class PlanetCrudService {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        return planet;
     }
 
     public Planet read(String planetId) {

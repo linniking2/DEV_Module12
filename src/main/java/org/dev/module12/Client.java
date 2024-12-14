@@ -1,7 +1,5 @@
 package org.dev.module12;
 import jakarta.persistence.*;
-import lombok.Data;
-
 
 
 @Entity
@@ -15,6 +13,9 @@ import lombok.Data;
 
         @Column(nullable = false, length = 200)
         private String name;
+
+    public Client() {
+    }
 
     public void setName(String name) {
         this.name = name;
