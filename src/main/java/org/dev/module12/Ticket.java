@@ -26,7 +26,7 @@ public class Ticket {
     @JoinColumn(name = "to_planet_id", nullable = false)
     private Planet toPlanet;
 
-    // Constructors
+
     public Ticket() {}
 
     public Ticket(Client client, Planet fromPlanet, Planet toPlanet) {
